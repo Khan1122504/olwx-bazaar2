@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OLWX Bazaar</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="logo">OLWX Bazaar</div>
+    <nav>
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('blog')">Blog</a>
+      <a onclick="showPage('about')">About</a>
+      <a onclick="showPage('contact')">Contact</a>
+      <a onclick="showPage('login')">Login</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search...">
+      <button onclick="searchPost()">🔍</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="page active-page">
+      <h2>Welcome to OLWX Bazaar</h2>
+      <div id="postList" class="post-list"></div>
+    </section>
+    <section id="blog" class="page">
+      <h2>Post Details</h2>
+      <div id="postDetails" class="full-post"></div>
+      <button onclick="showPage('home')">← Back</button>
+    </section>
+    <section id="about" class="page"><h2>About</h2><p>Local buying and selling platform.</p></section>
+    <section id="contact" class="page"><h2>Contact</h2><p>Email: support@olwx.com</p></section>
+    <section id="login" class="page"><h2>Login</h2><p>Enter your credentials.</p></section>
+  </main>
+
+  <footer class="footer-buttons">
+    <button onclick="alert('Call Box')">Call</button>
+    <button onclick="addSamplePost()">+Add</button>
+    <button onclick="alert('Chat Box')">Chat</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
